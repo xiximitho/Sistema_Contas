@@ -14,6 +14,10 @@ server.listen(port, function(){
     console.log(`Running the backend server on port ${port}.`) //Mostra quando server esta ouvindo e em qual porta.
 })
 
+module.exports = server
+
+
+
 /* MIDDLEWARE de teste.
 
 server.use(function(req,res,next){
