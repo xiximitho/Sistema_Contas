@@ -1,8 +1,6 @@
 const restful = require('node-restful')
 const mongoose = restful.mongoose
 
-const t_status = ['PAGO', 'PENDENTE', 'AGENDADO']
-
 const creditSchema = new mongoose.Schema({
 
     name: {type: String, required: true},
@@ -13,7 +11,7 @@ const creditSchema = new mongoose.Schema({
 const debtSchema = new mongoose.Schema({
     name: {type: String, required: true},
     value: { type: Number, min:0, required: [true, 'Informe o valor do débito']},
-    status: {type: String, enum: t_status, required: false, uppercase: true
+    status: {type: String, enum: ['PAGO', 'PENDENTE', 'AGENDADO'], required: false, uppercase: true
     }
 })//informacoes de como sera armazenado o 'Debito' no mongodb
 
