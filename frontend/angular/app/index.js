@@ -1,2 +1,6 @@
-angular.module('myApp', ['ngRoute']);
+angular.module('myApp', [
+    'ngRoute',
+    'ngAnimate',
+    'toastr'
+]);
 
