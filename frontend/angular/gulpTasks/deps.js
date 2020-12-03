@@ -2,20 +2,19 @@ const gulp = require('gulp')
 const uglify = require('gulp-uglify')
 const uglifycss = require('gulp-uglifycss')
 const concat = require('gulp-concat')
-const htmlmin = require('gulp-htmlmin')
 
 
 gulp.task('deps.js', () => {
-    return gulp.src(
+    return gulp.src([
         'node_modules/angular/angular.min.js',
-        'node_modules/angular-ui-router/release/angular-ui-router.min.js',
+        'node_modules/angular-route/angular-route.min.js',
         'node_modules/angular-animate/angular-animate.min.js',
         'node_modules/angular-toastr/dist/angular-toastr.min.js',
-        'node_modules/admin-lte/plugins/jQuery/jquery.min.js',
+        'node_modules/admin-lte/plugins/jQuery/jquery-2.2.3.min.js',
         'node_modules/admin-lte/bootstrap/js/bootstrap.min.js',
-        'node_modules/admin-lte/plugins/slimScroll/jquery.slimScroll.min.js',
+        'node_modules/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js',
         'node_modules/admin-lte/dist/js/app.min.js',
-    )
+    ])
     .pipe(uglify()) //deixa o arquivo compactado
     .pipe(concat('deps.min.js'))
     .pipe(gulp.dest('public/assets/js')) //Reduz o arquivo e manda para o path public/assets/js
