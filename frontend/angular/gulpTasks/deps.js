@@ -7,7 +7,7 @@ const concat = require('gulp-concat')
 gulp.task('deps.js', () => {
     return gulp.src([
         'node_modules/angular/angular.min.js',
-        'node_modules/angular-route/angular-route.min.js',
+        'node_modules/@uirouter/angularjs/release/angular-ui-router.js',
         'node_modules/angular-animate/angular-animate.min.js',
         'node_modules/angular-toastr/dist/angular-toastr.min.js',
         'node_modules/admin-lte/plugins/jQuery/jquery-2.2.3.min.js',
